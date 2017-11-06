@@ -1,2 +1,14 @@
 <% provide(:title, 'ユーザー情報') %>
-<%= @user.name %>, <%= @user.email %>
+
+<p>アカウントの名前：<%= @user.name %></p>
+
+<p>メールアドレス：<%= @user.email %></p>
+
+<p><%= link_to "ユーザー一覧に飛ぶ", users_path %></p>
+
+<% if current_user?(@user) && !current_user.admin? %>
+     <%= link_to "自分のアカウントを削除", @user, method: :delete,
+                                  data: { confirm: "自分のアカウントを削除しますか？" } %>
+<% end %>
+
+
