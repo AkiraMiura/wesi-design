@@ -10,7 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171023015447) do
+ActiveRecord::Schema.define(version: 20171106125342) do
+
+  create_table "data", force: :cascade do |t|
+    t.integer "survey_id"
+    t.string "name"
+    t.string "site_name"
+    t.string "reseacher_name"
+    t.datetime "date"
+    t.float "latitude"
+    t.float "longitude"
+    t.float "value1"
+    t.float "value2"
+    t.float "value3"
+    t.float "value4"
+    t.float "value5"
+    t.float "value6"
+    t.float "value7"
+    t.float "value8"
+    t.float "value9"
+    t.float "value10"
+    t.float "value11"
+    t.float "value12"
+    t.float "value13"
+    t.float "value14"
+    t.float "value15"
+    t.float "value16"
+    t.float "value17"
+    t.float "value18"
+    t.float "value19"
+    t.float "value20"
+    t.float "value21"
+    t.float "value22"
+    t.float "value23"
+    t.float "value24"
+    t.float "value25"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["survey_id"], name: "index_data_on_survey_id"
+  end
+
+  create_table "surveys", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_surveys_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"

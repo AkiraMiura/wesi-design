@@ -1,0 +1,13 @@
+<% provide(:title, '調査一覧') %>
+
+<%= link_to "調査データを新規登録する", "#", class: "btn btn-lg btn-primary" %>
+
+<h1>調査一覧</h1>
+
+
+  <% @surveys.each do |survey| %>
+
+  
+    <%= render survey %>
+
+  <% end %>

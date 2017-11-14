@@ -1,0 +1,69 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  site_name: MyString
+  reseacher_name: MyString
+  date: 2017-11-06 12:53:42
+  latitude: 1.5
+  longitude: 1.5
+  value1: 1.5
+  value2: 1.5
+  value3: 1.5
+  value4: 1.5
+  value5: 1.5
+  value6: 1.5
+  value7: 1.5
+  value8: 1.5
+  value9: 1.5
+  value10: 1.5
+  value11: 1.5
+  value12: 1.5
+  value13: 1.5
+  value14: 1.5
+  value15: 1.5
+  value16: 1.5
+  value17: 1.5
+  value18: 1.5
+  value19: 1.5
+  value20: 1.5
+  value21: 1.5
+  value22: 1.5
+  value23: 1.5
+  value24: 1.5
+  value25: 1.5
+  survey: one
+
+two:
+  name: MyString
+  site_name: MyString
+  reseacher_name: MyString
+  date: 2017-11-06 12:53:42
+  latitude: 1.5
+  longitude: 1.5
+  value1: 1.5
+  value2: 1.5
+  value3: 1.5
+  value4: 1.5
+  value5: 1.5
+  value6: 1.5
+  value7: 1.5
+  value8: 1.5
+  value9: 1.5
+  value10: 1.5
+  value11: 1.5
+  value12: 1.5
+  value13: 1.5
+  value14: 1.5
+  value15: 1.5
+  value16: 1.5
+  value17: 1.5
+  value18: 1.5
+  value19: 1.5
+  value20: 1.5
+  value21: 1.5
+  value22: 1.5
+  value23: 1.5
+  value24: 1.5
+  value25: 1.5
+  survey: two

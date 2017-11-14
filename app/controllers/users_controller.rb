@@ -45,7 +45,7 @@ class UsersController < ApplicationController
       User.find(params[:id]).destroy
       flash[:success] = "管理者のあなたはユーザーを削除しました"
       redirect_to users_url
-    elsif current_user?(@user)
+    elsif current_user.equal?(@user)
       flash[:success] = "あなたのアカウントは削除されました"
       redirect_to root_path
     else
