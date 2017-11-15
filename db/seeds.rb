@@ -10,9 +10,8 @@ Survey.create!(user_id: user.id ,name: "西滝調査")
 
 Datum.create!(
       survey_id: "1" ,
-      name: "上流",
       site_name:"青森上流調査",
-      reseacher_name:"工藤誠也",
+      researcher_name:"工藤誠也",
       date:"2014/03/03 15:22",
       latitude:"0",
       longitude:"0",
@@ -46,9 +45,8 @@ Datum.create!(
 
 Datum.create!(
       survey_id: "1" ,
-      name: "中流",
       site_name:"青森中流調査",
-      reseacher_name:"工藤誠也",
+      researcher_name:"工藤誠也",
       date:"2014/03/03 15:22",
       latitude:"0",
       longitude:"0",
@@ -81,9 +79,8 @@ Datum.create!(
 
 Datum.create!(
       survey_id: "1" ,
-      name: "下流",
       site_name:"青森下流調査",
-      reseacher_name:"工藤誠也",
+      researcher_name:"工藤誠也",
       date:"2014/03/03 15:22",
       latitude:"0",
       longitude:"0",
@@ -116,9 +113,8 @@ Datum.create!(
     
 Datum.create!(
       survey_id: "2" ,
-      name: "下流2",
       site_name:"青森下流調査2",
-      reseacher_name:"工藤誠也2",
+      researcher_name:"工藤誠也2",
       date:"2014/03/03 15:22",
       latitude:"0",
       longitude:"0",

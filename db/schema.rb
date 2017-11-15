@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171106125342) do
+ActiveRecord::Schema.define(version: 20171115102408) do
 
   create_table "data", force: :cascade do |t|
     t.integer "survey_id"
-    t.string "name"
     t.string "site_name"
-    t.string "reseacher_name"
+    t.string "researcher_name"
     t.datetime "date"
     t.float "latitude"
     t.float "longitude"
