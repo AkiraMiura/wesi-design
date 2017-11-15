@@ -1,5 +1,10 @@
 <% provide(:title, '調査登録') %>
-
+            
 <%= link_to "登録の説明を見る", help_path, class: "btn btn-lg btn-primary" %>
 
-<h1>調査登録する画面</h1>
+<%= link_to "ホームへ戻る", root_path, class: "btn btn-lg btn-primary" %>
+
+<h1>調査を登録する画面</h1>
+
+
+<%= render 'form' %>

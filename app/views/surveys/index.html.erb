@@ -1,6 +1,11 @@
 <% provide(:title, '調査一覧') %>
 
-<%= link_to "調査データを新規登録する", "#", class: "btn btn-lg btn-primary" %>
+<% if logged_in? %>
+<%= link_to "調査データを新規登録する", new_survey_path , class: "btn btn-lg btn-primary" %>
+<% end %>
+
+
+
 
 <h1>調査一覧</h1>
 

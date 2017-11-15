@@ -13,11 +13,16 @@ class DataController < ApplicationController
     end
     
   def create
-    @datum = Datum.new(survey_params)
-    if @datum.save
-      flash[:success] = "データの登録に成功しました！"
-    else
-      flash[:success] = "データの登録に失敗しました！"
+    @datum = Datum.new(datum_params)
+
+    respond_to do |format|
+      if @datum.save
+        format.html { redirect_to @datum, notice: 'データ登録が完了しました。' }
+        format.json { render :show, status: :created, location: @datum }
+      else
+        format.html { render :new }
+        format.json { render json: @datum.errors, status: :unprocessable_entity }
+      end
     end
   end
   
