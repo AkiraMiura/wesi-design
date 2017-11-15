@@ -2,8 +2,8 @@
 
 <h1><%= @survey.name %></h1>
 
+	<h2>登録している地点名</h2>
+	<% @survey.data.each do |datum| %>
+			<p><%= link_to datum.site_name, controller: "data", action: "show", id: datum.id %></p>
+	<% end %>
 
-
-
-
-<p>ここにデータリンク</p>

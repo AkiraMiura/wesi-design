@@ -1,3 +1,4 @@
 class Survey < ApplicationRecord
-  belongs_to :user
+    has_many :data, dependent: :destroy
+    belongs_to :user
 end
