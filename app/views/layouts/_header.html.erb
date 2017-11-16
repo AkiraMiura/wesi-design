@@ -6,6 +6,7 @@
         <li><%= link_to "ホーム", root_path %></li>
         <li><%= link_to "調査一覧", surveys_path %></li>
         <% if logged_in? %>
+
         
           <% if current_user.admin? %>
             <li><%= link_to "ユーザー一覧", users_path %></li>
