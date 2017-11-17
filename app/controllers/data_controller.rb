@@ -1,7 +1,7 @@
 class DataController < ApplicationController
 
   def index
-    @datums = Datum.all
+    @data = Datum.all
   end
      
     def show
