@@ -1,9 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
   site_name: MyString
-  reseacher_name: MyString
+  researcher_name: MyString
   date: 2017-11-06 12:53:42
   latitude: 1.5
   longitude: 1.5
@@ -35,9 +34,8 @@ one:
   survey: one
 
 two:
-  name: MyString
   site_name: MyString
-  reseacher_name: MyString
+  researcher_name: MyString
   date: 2017-11-06 12:53:42
   latitude: 1.5
   longitude: 1.5
