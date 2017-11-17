@@ -1,5 +1,11 @@
 class SurveysController < ApplicationController
   
+  def destroy
+    Survey.find(params[:id]).destroy
+    flash[:success] = "データを削除しました。"
+    redirect_to surveys_url
+  end
+  
   def index
     @surveys = Survey.all
   end

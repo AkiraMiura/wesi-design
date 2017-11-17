@@ -1,5 +1,18 @@
 
 
 <li>
+    
   <%= link_to survey.name, survey %>
+  
+  <% if logged_in? %>
+    <% if current_user.admin? %>
+         <%= link_to "管理者がデータを削除", survey, method: :delete,
+            data: { confirm: "管理者権限で調査データを削除しますか?" } %>  
+    <% elsif current_user.id == survey.user.id %>
+         <%= link_to "データを削除", survey, method: :delete,
+            data: { confirm: "調査データを削除しますか?" } %>   
+    <% end %>
+    <% end %>
+  
+  
 </li>
