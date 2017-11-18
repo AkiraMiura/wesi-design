@@ -3,7 +3,7 @@ require 'csv'
 class Datum < ApplicationRecord
   belongs_to :survey
  
-   def self.import(survey)
+  def self.import(survey)
     CSV.foreach(survey.file.path, {
       encoding: "cp932:utf-8", headers: true, skip_blanks: true }) do |row|
       survey.data.create!(
@@ -39,7 +39,8 @@ class Datum < ApplicationRecord
         value25: row["地域とのつながり"].to_f)
         
       end
-  end  
+  end 
+  
   def survey_name
     self.survey.name
   end 

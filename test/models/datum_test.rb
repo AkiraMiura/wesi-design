@@ -1,7 +1,51 @@
 require 'test_helper'
 
 class DatumTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  def setup
+    
+    @user = User.new(name: "Example User", email: "user@example.com",
+                     password: "foobar", password_confirmation: "foobar")
+    
+    @survey = @user.surveys.new(name: "東京調査")
+    
+    @datum = @survey.data.new(      
+      site_name:"青森上流調査",
+      researcher_name:"工藤誠也",
+      date:"2014/03/03 15:22",
+      latitude:"0",
+      longitude:"0",
+      value1:"1",
+      value2:"2",
+      value3:"3",
+      value4:"1",
+      value5:"2",
+      value6:"3",
+      value7:"1",
+      value8:"2",
+      value9:"3",
+      value10:"1",
+      value11:"2",
+      value12:"3",
+      value13:"1",
+      value14:"2",
+      value15:"3",
+      value16:"1",
+      value17:"2",
+      value18:"3",
+      value19:"1",
+      value20:"2",
+      value21:"3",
+      value22:"1",
+      value23:"2",
+      value24:"3",
+      value25:"1")
+      
+      
+  end
+  
+  test "datum valid" do
+    assert @datum.valid?
+  end
+  
 end

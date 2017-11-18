@@ -10,13 +10,13 @@ class SurveysController < ApplicationController
     @surveys = Survey.all
   end
     
-    def show
-        @survey = Survey.find(params[:id])
-    end
+  def show
+    @survey = Survey.find(params[:id])
+  end
     
-    def new
-        @survey = Survey.new
-    end
+  def new
+    @survey = Survey.new
+  end
     
   def create
     @survey = current_user.surveys.build(survey_params)
@@ -34,10 +34,5 @@ class SurveysController < ApplicationController
     def survey_params
       params.require(:survey).permit(:name, :file)
     end
-  
-  
-  
-  
-  
     
 end
