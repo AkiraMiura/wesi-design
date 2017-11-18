@@ -44,8 +44,72 @@ class DatumTest < ActiveSupport::TestCase
       
   end
   
-  test "datum valid" do
+  
+  test "datum の有効性を検証" do
     assert @datum.valid?
   end
+  
+  test "datum site_nameの存在性を検証する" do
+    @datum.site_name = "     "
+    assert_not @datum.valid?
+  end
+  
+  test "datum site_nameの長さを検証する" do
+    @datum.site_name = "a" * 51
+    assert_not @datum.valid?
+  end
+
+  test "researcher_nameの存在性を検証する" do
+    @datum.researcher_name = "   "
+    assert_not @datum.valid?
+  end
+
+  test "researcher_nameの長さを検証する" do
+    @datum.researcher_name = "a" * 51
+    assert_not @datum.valid?
+  end
+
+  test "latitude(緯度)の存在性を検証する" do
+    @datum.latitude = "   "
+    assert_not @datum.valid?
+  end
+  
+  test "latitude(緯度)の緯度は-90~90の間である" do
+    @datum.latitude = "91"
+    assert_not @datum.valid?
+  end
+  
+  test "longitude(経度)の存在性を検証する" do
+    @datum.longitude = "   "
+    assert_not @datum.valid?
+  end
+
+  test "longitude(経度)の経度は-180~180の間である" do
+    @datum.longitude = "181"
+    assert_not @datum.valid?
+  end
+
+  test "dateは日時である" do
+    @datum.date = "2014/03/03 15:123456789"
+    assert_not @datum.valid?
+  end
+  
+  test "調査項目は0~3である" do
+    @datum.value1 = "10000"
+    assert_not @datum.valid?
+  end
+
+  test "調査項目はnilでもOK" do
+    @datum.value1 = ""
+    assert @datum.valid?
+  end
+
+
+
+
+
+
+  
+
   
 end

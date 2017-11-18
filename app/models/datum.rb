@@ -2,6 +2,99 @@ require 'csv'
 
 class Datum < ApplicationRecord
   belongs_to :survey
+  
+  validates :site_name, presence: true, length: { maximum: 50 }
+  validates :researcher_name, presence: true, length: { maximum: 50 }
+  
+  #緯度経度は数値である制限(緯度は-90~90の間である)(緯度は-180~180の間である)
+  validates :latitude, presence: true,
+  numericality: {greater_than_or_equal_to: -90 ,less_than_or_equal_to: 90}
+  validates :longitude, presence: true, 
+  numericality: {greater_than_or_equal_to: -180 ,less_than_or_equal_to: 180}
+  validates :date, presence: true
+  
+  #データの項目は数値である制限(範囲は0~3)
+  #データの調査項目はnilを許す
+  validates :value1,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value2,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value3,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value4,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value5,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value6,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value7,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value8,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value9,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value10,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value11,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value12,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value13,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value14,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value15,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value16,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value17,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value18,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value19,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value20,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value21,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value22,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value23,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value24,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+  validates :value25,
+  numericality: {greater_than_or_equal_to: 0 ,less_than_or_equal_to: 3},
+  :allow_blank => true
+
+
+
+
+  
  
   def self.import(survey)
     CSV.foreach(survey.file.path, {

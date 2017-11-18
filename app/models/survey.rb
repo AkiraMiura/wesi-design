@@ -4,4 +4,6 @@ class Survey < ApplicationRecord
     
     attr_accessor :file
     
+    validates :name, presence: true, length: { maximum: 50 }
+    
 end
