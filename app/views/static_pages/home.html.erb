@@ -1,8 +1,47 @@
 <% provide(:title, "ホーム") %>
-<h1>ここに地図</h1>
-<p>
-ボタンと説明
 
+    	<script src="https://unpkg.com/popper.js"></script>
+<!-- canvas -->
+<div class="row">
+	<div class="col-sm-1"></div>
+	<class="col-sm10">
+		<div id="map-canvas">
+		</div>
+	</div>
+	<div class="col-sm-1"></div>
+</div>
+
+
+<!--<div class='container'> -->
+	<div class="row">
+		<div class="col-sm-1"></div>
+		
+   		<div id="mode" class="btn-group col-sm-10" data-toggle="buttons" style = "padding-left:0px">
+			<label class="btn btn-primary active">
+				<input type="radio" autocomplete="off" value="0" name="item_select">自然のすがた</label>
+			<label class="btn btn-primary">
+				<input type="radio" autocomplete="off" value="1" name="item_select">豊かな生き物</label>
+   			<label class="btn btn-primary">
+				<input type="radio" autocomplete="off" value="2" name="item_select">水のきれいさ</label>
+			<label class="btn btn-primary">
+				<input type="radio" autocomplete="off" value="3" name="item_select">快適な水辺</label>
+			<label class="btn btn-primary">
+				<input type="radio" autocomplete="off" value="4" name="item_select">地域とのつながり</label>
+			<label class="btn btn-primary">
+				<input type="radio" autocomplete="off" value="5" name="item_select">総合平均</label>
+		</div>
+		
+		<!--
+		<div class="col-sm-10" style= "background:#ff0000;">
+			hello
+		</div>
+		-->
+		<div class="col-sm-1"></div>
+	</div>
+<!-- </div> -->
+
+<!--
 <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary" %>
-
+-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSbQNYFqVhM8dgszl84006WpFVLy9FfEo&callback=initMap"async defer></script>	
 </p>

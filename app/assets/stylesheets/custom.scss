@@ -3,8 +3,14 @@
 
 /* 共通のCSS*/
 
+html {
+  height: 100%;
+
+}
+
 body {
   padding-top: 60px;
+  height: 100%;
 }
 
 section {
@@ -165,3 +171,32 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+
+/* homeの地図用 */
+#map-canvas {
+    width: 90%;
+    height: 70vh;
+      /*
+			width:600px;
+			height:600px;
+			*/
+		}
+
+		
+		
+		.gm-style-iw {	
+				
+			width:300px !important;
+			height:314px !important;
+			top: 1px !important;
+			left: 1px !important;
+			right: 1px !important;
+			bottom: 1px !important;
+		}
+		
+		.infoWindow {
+			width:300px !important;
+			height:320px !important;
+		}
+		
